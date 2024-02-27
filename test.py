@@ -54,10 +54,8 @@ else:
     csrftoken = client.cookies['csrf']
 
 
-#EMAIL=input("Username: ")
-#PASSWORD=getpass.getpass()
-EMAIL="c1045890@cardiff.ac.uk"
-PASSWORD="B21&*iXiicvCIw8ke9^"
+EMAIL=input("Username: ")
+PASSWORD=getpass.getpass()
 
 login_data = dict(username=EMAIL, password=PASSWORD, csrfmiddlewaretoken=csrftoken, next='/en-gb/admin/')
 r = client.post(URL, data=login_data, headers=dict(Referer=URL))
